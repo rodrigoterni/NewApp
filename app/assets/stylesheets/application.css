@@ -1,3 +1,4 @@
-body{margin: 0; padding: 0;}
+html, body, div, ul, ol, dl, dd, dt li, h1, h2, h3, h4, h5, p, a, form, blockquote, img, a img, fieldset, textarea { margin:0; padding:0; outline:none; border:none; text-decoration:none; }
+body { height:100%; font:12px/16px "Helvetica Neue", Helvetica, Arial, sans-serif; }
 .appheader{background-color: black; width: auto; height: 100px; margin: 0;}
 .mainbody{width: 1000px; margin: auto; display: block;}
