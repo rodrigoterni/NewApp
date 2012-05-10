@@ -7,7 +7,7 @@ class FundsController < ApplicationController
   end
 
   def index
-    @fund = Fund.order(:name)
+    @funds = Fund.order(:name)
   end
 
   def show

@@ -1,0 +1,33 @@
+<h1>Todos os Fundos</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Categoria</th>
+    <th>Aplicação Mínima</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% if @funds.empty? %>
+  <tr>
+    <td colspan = "5"> Não existe nenhum fundo cadastrado </td>
+  </tr>
+<% else %>
+  <% @funds.each do |fund| %>
+    <tr>
+      <td><%= fund.name %></td>
+      <td><%= fund.category %></td>
+      <td><%= fund.minapp %></td>
+      <td><%= link_to 'Show', fund %></td>
+      <td><%= link_to 'Edit', edit_fund_path(fund) %></td>
+      <td><%= link_to 'Destroy', fund, confirm: 'Are you sure?', method: :delete %></td>
+    </tr>
+  <% end %>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Fund', new_fund_path %>

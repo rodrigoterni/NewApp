@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome:</b>
+  <%= @fund.name %>
+</p>
+
+<p>
+  <b>Categoria:</b>
+  <%= @fund.category %>
+</p>
+
+<p>
+  <b>Aplicação Mínima:</b>
+  <%= @fund.minapp %>
+</p>
+
+
+<%= link_to 'Edit', edit_fund_path(@fund) %> |
+<%= link_to 'Back', funds_path %>
