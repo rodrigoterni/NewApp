@@ -1,4 +1,6 @@
 class Fund < ActiveRecord::Base
+   
+  attr_accessible :name, :category, :minapp, :trackrecord
 
   serialize :trackrecord, Hash
 

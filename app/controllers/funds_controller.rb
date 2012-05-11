@@ -29,7 +29,7 @@ class FundsController < ApplicationController
 
     if @fund.save
       flash[:notice] = "Fundo #{@fund.name} salvo"
-      redirect_to @post
+      redirect_to @fund
     else
       render :new
     end
@@ -40,6 +40,7 @@ class FundsController < ApplicationController
 
     if @fund.update_attributes(params[:post])
       flash[:notice] = "Fundo #{@fund.name} atualizado com sucesso"
+      redirect_to @fund
     else
       render :edit
     end
