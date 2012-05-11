@@ -1,10 +1,9 @@
 class CreateFunds < ActiveRecord::Migration
   def change
     create_table :funds do |t|
-      t.string :name
-      t.integer :minapp
-      t.string :category
-      t.text :trackrecord
+      t.string :name, null: false
+      t.integer :min_application, null: false  
+      t.string :category, null: false
 
       t.timestamps
     end

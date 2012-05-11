@@ -38,7 +38,7 @@ class FundsController < ApplicationController
 
   def update
 
-    if @fund.update_attributes(params[:post])
+    if @fund.update_attributes(params[:fund])
       flash[:notice] = "Fundo #{@fund.name} atualizado com sucesso"
       redirect_to @fund
     else

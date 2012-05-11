@@ -12,32 +12,9 @@
 
 <p>
   <b>Aplicação Mínima:</b>
-  <%= @fund.minapp %>
+  <%= @fund.min_application %>
 </p>
 
-<% if @fund.trackrecord.empty? %>
-	<div class="trackrecord">
-		<p> Não tem histórico para mostrar </p>
-	</div>
-<% else %>
-	<div class="trackrecord">
-	<table>
-	  <tr>
-	    <th>Jan/12</th>
-	    <th>Fev/12</th>
-	    <th>Mar/12</th>
-	    <th>Abr/12</th>
-	    <th></th>
-	    <th></th>
-	  </tr>
-	  <tr>
-		<td><%= @fund.trackrecord['2012-01'] %></td>
-		<td><%= @fund.trackrecord['2012-02'] %></td>
-		<td><%= @fund.trackrecord['2012-03'] %></td>
-		<td><%= @fund.trackrecord['2012-04'] %></td>
-	  </tr>
-	</table>
-<% end %>
 
 
 <%= link_to 'Edit', edit_fund_path(@fund) %> |

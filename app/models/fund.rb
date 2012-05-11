@@ -1,11 +1,8 @@
 class Fund < ActiveRecord::Base
    
-  attr_accessible :name, :category, :minapp, :trackrecord
-
-  serialize :trackrecord, Hash
+  attr_accessible :name, :category, :min_application
 
   validates :name, :presence => true
-  validates :minapp, :presence => true
+  validates :min_application, :presence => true
   validates :category, :presence => true
-
 end
